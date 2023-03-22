@@ -2,16 +2,14 @@
 const router = require('express').Router();
 
 // controller
-const {
-  testing
-} = require('../controllers');
+const testingCtrl = require('../controllers/testing.controller');
 
 // middlewares
 const {
   rateLimiter
-} = require('../lib/middlewares/limiter.middleware');
+} = require('../lib/limiter.middleware');
 
 // routing
-router.get('/test', rateLimiter, testing.home);
+router.get('/test', rateLimiter, testingCtrl.home);
 
 module.exports = router;

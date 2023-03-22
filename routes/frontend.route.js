@@ -2,11 +2,9 @@
 const router = require('express').Router();
 
 // controller
-const {
-  frontend
-} = require('../controllers');
+const frontendCtrl = require('../controllers/frontend.controller');
 
 // all other GET requests not handled before will return our react app
-router.get('*', frontend.client);
+router.get('*', frontendCtrl.client);
 
 module.exports = router;
