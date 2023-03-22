@@ -6,6 +6,12 @@ const mlUtils = require('../utils/mercadolibre.utils');
 
 // controllers definition
 exports.search = async (req, res) => {
+  // query
+  const {
+    query = '',
+    limit = 4
+  } = req.query;
+
   // variables
   let rawRecordset;
   let currencies;
@@ -13,7 +19,8 @@ exports.search = async (req, res) => {
   // fetch recordsets
   try {
     rawRecordset = await mlServices.fetchSearch(
-      req.query.q || ''
+      query,
+      limit
     );
   } catch (ex) {
     return res.failure(-1, ex.messsage, 500);

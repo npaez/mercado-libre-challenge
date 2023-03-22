@@ -12,15 +12,18 @@ const {
  * @param { String } q
  * @returns { Object }
  */
-exports.fetchSearch = async (q = '') => {
-  if (!q) {
+exports.fetchSearch = async (
+  query = '',
+  limit = 4
+) => {
+  if (!query) {
     throw new Error('empty query not allowed');
   }
 
   try {
     const {
       data: response
-    } = await axios.get(`${ URI.MELI_SEARCH }?q=${ q }`);
+    } = await axios.get(`${ URI.MELI_SEARCH }?q=${ query }&limit=${ limit }`);
 
     return response;
   } catch (ex) {
