@@ -27,7 +27,7 @@ exports.processItems = (
       id: item.id,
       title: item.title,
       price: {
-        price: item.price,
+        amount: item.price,
         currency,
         decimals,
         symbol
