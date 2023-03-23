@@ -93,7 +93,8 @@ exports.processCurrencies = (recordset = []) => {
 exports.processSingleItem = (
   record = {},
   description = {},
-  currency = {}
+  currency = {},
+  category = {}
 ) => {
   return {
     // Couldn't find any field related to "author" or "name" or "lastname"
@@ -114,7 +115,8 @@ exports.processSingleItem = (
       condition: record.condition,
       free_shipping: record.shipping.free_shipping,
       sold_quantity: record.sold_quantity,
-      description: description.plain_text
+      description: description.plain_text,
+      categories: category.path_from_root.map(({ name }) => name)
     }
   };
 };
