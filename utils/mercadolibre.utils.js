@@ -115,8 +115,8 @@ exports.processSingleItem = (
       condition: record.condition,
       free_shipping: record.shipping.free_shipping,
       sold_quantity: record.sold_quantity,
-      description: description.plain_text,
-      categories: category.path_from_root.map(({ name }) => name)
-    }
+      description: description.plain_text
+    },
+    categories: category.path_from_root.map(({ name }) => name)
   };
 };
