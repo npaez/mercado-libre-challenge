@@ -89,3 +89,23 @@ exports.fetchItemDescription = async (id = '') => {
     throw new Error(ex.message);
   };
 };
+
+/**
+ * @param { String } id
+ * @returns { Object }
+ */
+exports.fetchCategories = async (id = '') => {
+  if (!id) {
+    throw new Error('unknown id');
+  }
+
+  try {
+    const {
+      data: response
+    } = await axios.get(`${ URI.MELI_CATEGORY }/${ id }`);
+
+    return response;
+  } catch (ex) {
+    throw new Error(ex.message);
+  };
+};
