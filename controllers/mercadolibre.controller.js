@@ -55,6 +55,7 @@ exports.item = async (req, res) => {
   let rawItem;
   let rawDescription;
   let rawCurrency;
+  let rawCategory;
 
   // query item detail
   try {
@@ -83,11 +84,20 @@ exports.item = async (req, res) => {
     return res.failure(-1, ex.message, 500);
   };
 
+  try {
+    rawCategory = await mlServices.fetchCategories(
+      rawItem.category_id
+    );
+  } catch (ex){
+    return res.failure(-1, ex.message, 500);
+  };
+
   // process detail
   const item = mlUtils.processSingleItem(
     rawItem,
     rawDescription,
-    rawCurrency
+    rawCurrency,
+    rawCategory
   );
 
   return res.success(item, 200);
