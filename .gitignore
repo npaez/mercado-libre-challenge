@@ -32,6 +32,7 @@ build/Release
 # Dependency directory
 # https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
 /node_modules
+/client/node_modules
 logs/
 /.pnp
 .pnp.js
@@ -42,7 +43,6 @@ logs/
 
 # Optional REPL history
 .node_repl_history
-
 
 ### SublimeText ###
 # cache files for sublime text
@@ -64,14 +64,14 @@ sftp-config.json
 .env
 
 # testing
-/coverage
+/client/coverage
 
 # production
-/build
+/client/build
 
 # misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+/client/.DS_Store
+/client/.env.local
+/client/.env.development.local
+/client/.env.test.local
+/client/.env.production.local
