@@ -22,7 +22,8 @@ const router = createBrowserRouter([
     path: '/item/:id',
     element: <Detail />
   },
-]);
-;
+], {
+  basename: '/'
+});
 
 export default router;
