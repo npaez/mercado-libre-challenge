@@ -53,7 +53,14 @@ module.exports = {
     server.set('json spaces', 2);
     server.use(logger('dev'));
     // helment security lib
-    server.use(helmet());
+    server.use(helmet({
+      contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          'img-src': ["'self'", "https: data:"]
+        }
+      }
+    }));
     // disable server banner header
     server.disable('x-powered-by');
     // compress middleware to gzip content
