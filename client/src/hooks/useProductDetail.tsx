@@ -47,7 +47,7 @@ const useProductDetal = () => {
         setIsLoading(false);
       }
     })();
-  }, []);
+  }, [ id ]);
 
   return {
     isLoading,
