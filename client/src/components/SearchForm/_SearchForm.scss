@@ -1,0 +1,44 @@
+@use '../../styles/_variables.scss';
+
+.search-form {
+  display: flex;
+  flex: 1;
+  margin-left: 26px;
+}
+
+.search-form-input {
+  width: 100%;
+  padding: 0 10px;
+  border: 1px solid variables.$white;
+  border-radius: 4px 0 0 4px;
+  height: 36px;
+
+  &::placeholder {
+    color: variables.$grey999;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: variables.$blue;
+  }
+}
+
+.search-form-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 0;
+  border-radius: 0 4px 4px 0;
+  padding: 0 12px;
+  background-color: variables.$lightgrey;
+  cursor: pointer;
+
+  &:hover {
+    background-color: variables.$lightgrey2;
+  }
+  
+  &:active {
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.02);
+    background-color: variables.$lightgrey3;
+  }
+}

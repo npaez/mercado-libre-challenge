@@ -1,0 +1,77 @@
+@use '../../styles/_variables.scss';
+
+a {
+  text-decoration: none;
+}
+
+.item-wrapper {
+  margin: 16px 32px;
+  padding: 16px 0;
+  display: flex;
+  border-bottom: 1px solid variables.$lightgrey;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.item-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 4px;
+  margin-right: 16px;
+}
+
+.item-info {
+  display: block
+}
+
+@media (min-width: 768px) {
+  .item-info {
+    display: flex;
+    flex: 1;
+  }
+}
+
+.item-detail {
+  flex: 1;
+
+  span {
+    display: flex;
+  }
+
+  span.price {
+    align-items: center;
+    font-size: 24px;
+    margin-top: 16px;
+    margin-bottom: 32px;
+
+    a {
+      color: variables.$grey300;
+    }
+
+    img {
+      margin-left: 16px;
+    }
+  }
+
+  span.title {
+    font-size: 18px;
+
+    a {
+      color: variables.$grey666;
+    }
+  }
+}
+
+.item-location {
+  flex: .3;
+
+  span {
+    display: flex;
+    
+    margin-top: 36px;
+    font-size: 12px;
+    color: variables.$grey666;
+  }
+}

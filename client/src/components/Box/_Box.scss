@@ -1,0 +1,6 @@
+@use '../../styles/_variables.scss';
+
+.box {
+  background-color: variables.$white;
+  margin-bottom: 32px;
+}

@@ -1,0 +1,9 @@
+@use '../../styles/_variables.scss';
+
+.wrapper {
+  margin: 16px 32px;
+  padding: 32px;
+  text-align: center;
+  font-size: 18px;
+  color: variables.$grey666;
+}

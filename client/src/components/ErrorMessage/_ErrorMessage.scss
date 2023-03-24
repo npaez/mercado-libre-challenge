@@ -1,0 +1,9 @@
+@use '../../styles/_variables.scss';
+
+.message-error {
+  background-color: variables.$red;
+  color: variables.$white;
+  padding: 16px;
+  border-radius: 4px;
+  margin: 32px 0;
+}

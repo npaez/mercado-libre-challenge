@@ -1,0 +1,16 @@
+@use '../../styles/_variables.scss';
+
+.navbar-wrapper {
+  box-sizing: border-box;
+  position: relative;
+  min-height: 54px;
+  background-color: variables.$yellow;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+
+  .navbar {
+    display: flex;
+    align-items: center;
+  }
+}
