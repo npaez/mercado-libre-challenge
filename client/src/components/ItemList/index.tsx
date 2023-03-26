@@ -43,6 +43,8 @@ const ItemList = ({ item }: IItemProps) => {
             { !!item.free_shipping &&
               <img
                 src={ FreeShipping }
+                width={ 18 }
+                height={ 18 }
                 alt="Free Shipping"
                 title="Envio Gratis"
               />
